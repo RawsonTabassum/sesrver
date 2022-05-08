@@ -22,6 +22,7 @@ async function run() {
     try{
         await client.connect();
         const booksCollection = client.db('booksInventory').collection('books');
+        const suppliersCollection = client.db('booksInventory').collection('suppliers');
 
         app.get('/inventory', async (req, res)=> {
             const query = {};
