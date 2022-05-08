@@ -73,7 +73,9 @@ async function run() {
 
 
         app.post('/inventory', async (req, res)=> {
-            res.send('testing adding a new product');
+            const newBook = req.body;
+            const result = await booksCollection.insertOne(newBook);
+            res.send(result);
         })
 
     } finally {
