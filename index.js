@@ -71,6 +71,11 @@ async function run() {
             res.send(result);
         });
 
+
+        app.post('/inventory', async (req, res)=> {
+            res.send('testing adding a new product');
+        })
+
     } finally {
 
     }
